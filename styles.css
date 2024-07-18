@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'Elianto';
+    src: url('Elianto Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PingFang SC Thin';
+    src: url('PingFang SC Thin.ttf') format('truetype');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: url('background.png') no-repeat center top #000;
+    background-size: cover;
+    animation: backgroundMove 10s infinite cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: center top;
+    }
+    50% {
+        background-position: center 1.5%;
+    }
+    100% {
+        background-position: center top;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'PingFang SC Thin', Arial, sans-serif;
+    z-index: 1;
+    background-attachment: fixed;
+}
+
+.title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.electronics-title {
+    font-family: 'Elianto', sans-serif;
+    font-size: 6em;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+    animation: fadeInSlideUp 1.8s ease-in-out;
+    margin-bottom: 0;
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.floating-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: fadeInSlideUp 1s ease-in-out;
+    z-index: 0;
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.fuzzy {
+    position: absolute;
+    bottom: 0;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: float 7s ease-in-out, fadeInOut 7s ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10%, 40% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.large {
+    font-size: 2.5em;
+    margin: 1.5em 0 0.5em 0;
+    animation: fadeInSlideUp 2s ease-in-out;
+}
+
+.medium {
+    font-size: 2em;
+    margin: 1.5em 0 0.01em 0;
+    animation: fadeInSlideUp 2s ease-in-out;
+}
+
+.small {
+    font-size: 1.5em;
+    margin: 1em 0;
+    animation: fadeInSlideUp 2s ease-in-out;
+}
+
+.formula {
+    text-align: center;
+    font-size: 2em;
+    margin: 1em 0;
+    animation: fadeInSlideUp 2s ease-in-out;
+}
+
+.formula-caption {
+    font-size: 1em;
+    color: #ccc;
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.formula-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: fadeInSlideUp 2s ease-in-out;
+}
+
+.inline-block {
+    width: 45%;
+    text-align: center;
+    margin: 20px 2.5%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+    z-index: 1;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typewriter 2s steps(20) 1s 1 normal both;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .electronics-title {
+        font-size: 4em;
+    }
+
+    .large {
+        font-size: 2em;
+    }
+
+    .medium {
+        font-size: 1.5em;
+    }
+
+    .small {
+        font-size: 1.2em;
+    }
+
+    .formula {
+        font-size: 1.5em;
+    }
+
+    .content-container {
+        padding: 0 10px;
+    }
+
+    .content {
+        padding: 0 10px;
+    }
+
+    .inline-block {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .formula-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .electronics-title {
+        font-size: 3em;
+    }
+
+    .large {
+        font-size: 1.5em;
+    }
+
+    .medium {
+        font-size: 1.2em;
+    }
+
+    .small {
+        font-size: 1em;
+    }
+
+    .formula {
+        font-size: 1.2em;
+    }
+
+    .formula-caption {
+        font-size: 0.8em;
+    }
+}
+
+.inline-block.scroll-reveal.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.inline-block.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

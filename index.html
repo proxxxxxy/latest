@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>エレクトロニクスコースの説明</title>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="floating-container"></div>
+        <div class="title-container">
+            <div class="electronics-title">-ELECTRONICS-</div>
+        </div>
+        <div class="content-container">
+            <div class="content">
+                <div class="large">エレクトロニクスコースとは？</div>
+                <div class="small">エレクトロニクスコース(通称:Eコース)は主に電気に関する事を学べる分野です。電気回路や電磁気、半導体について深く学べます。</div>
+                <div class="large">どんなことをするの？</div>
+                <div class="medium">回路や半導体</div>
+                <div class="small">エレクトロニクスコースでは電気回路や理論を学びます。電気回路では皆さんご存じのオームの法則から始まります。しかし、あれは実は直流回路のお話であり、交流回路では話が変わってきます。でも、式ではあまり変化がありません。</div>
+                <div class="formula-container">
+                    <div class="inline-block">
+                        <div class="formula">$$ V = IR $$</div>
+                        <div class="formula-caption">オームの法則(直流)</div>
+                    </div>
+                    <div class="inline-block">
+                        <div class="formula">$$ V = IZ $$</div>
+                        <div class="formula-caption">オームの法則(交流)</div>
+                    </div>
+                </div>
+                <div class="small">IやVは見覚えがあると思います。しかし、交流のZとは何でしょう？Eコースではこれを学びます。他の法則ももちろんあるのですが、ここを深堀りするのはEコースのみです。また、オームの法則が通用しないものも出てきます。それが<b>半導体</b>で、聞き覚えがあると思います。そのため電流と電圧は別の方法で求めます。その理論ももちろん、実験実習や授業を通して学べます。</div>
+                <div class="medium">デジタルとアナログ、理論</div>
+                <div class="small">私たちの世界ではデジタルとアナログがあり、電気の世界も同じです。例えばライトのON、OFFを切り替えるスイッチを思い浮かべてみてください。これをデジタルの世界では2進数として考えます。2進数は1と0でできている世界で、この場合は｢ONが1、OFFを0｣として考えます。さらにこの例をもっと深く考えると｢1は中身がつまっているもの、0は空っぽのもの｣と考えられます。実際に、これの仕組みを利用した記号を下に示します。</div>
+                <div class="formula-container">
+                    <div class="inline-block">
+                        <img src="OR.png" alt="OR回路">
+                        <div class="formula-caption">OR回路</div>
+                    </div>
+                    <div class="inline-block">
+                        <img src="AND.png" alt="AND回路">
+                        <div class="formula-caption">AND回路</div>
+                    </div>
+                </div>
+                <div class="small">これも2年生後期できっと勉強することになります。理論は知能情報コースと全く同じことを学びますが、これを実際の回路に使用することはEコースの特色といえるでしょう。(この話は数学では<b>集合</b>という分野です。Eコースを希望している1年生は｢ド・モルガンの法則｣をしっかり勉強しておくように！)</div>
+                <div class="small">そしてデジタルとは話が変わり、Eコースでは数学物理がとても重要になります。2年生のEコース専門科目では高校生で習う式で何とかなります。しかし、3年生に入るともう大学数学です。例えば2年生の物理でこのような公式を習います。</div>
+                <div class="formula">$$ F = k_e \frac{q_1 q_2}{r^2} $$</div>
+                <div class="formula-caption center-formula-caption">クーロンの法則</div>
+                <div class="small">正直なところこれは文字が多いだけで、大して難しく考えなくても式の意味は何となく理解できるでしょう。しかし、3年生で学ぶ数式はこんな感じです。</div>
+                <div class="formula">
+                    $$\begin{cases}
+                    \nabla \cdot \vec{E} = \frac{\rho}{\epsilon_0} \\ 
+                    \nabla \cdot \vec{B} = 0 \\ 
+                    \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \\ 
+                    \nabla \times \vec{B} = \mu_0 \left( \vec{J} + \epsilon_0 \frac{\partial \vec{E}}{\partial t} \right)
+                    \end{cases}$$
+                </div>
+                <div class="formula-caption center-formula-caption">マクスウェル方程式</div>
+                <div class="small">何が何だか分からないと思います。これを検索すると、分かりやすく解説されているものがありますが、大半が理論の説明です。これと並行して実際に計算することを学べるのがEコースです。他のコースでも3、4年生の数学物理で学びますが、Eコースはこの理論を計算するために最速で大学の数学物理をやります。そのため、後にする数学物理が楽になるのは間違いないと思います。</div>
+                <div class="medium">実験実習</div>
+                <div class="small">エレクトロニクスコースでは実験実習がガラッと変わり、回路とパソコンを接続して行うものが多いです。組んでみた回路をデジタルな波形や数字として見るので、パソコンが必要になります。それで得られたデータでレポートを書くことがほとんどです。先程説明したデジタルとアナログの世界はここで活かされてきます。</div>
+                <div class="large">どんなことができるようになる？</div>
+                <div class="small">上記の事をまとめるとEコースではデジタルとアナログ、どちらも学べます。そのため、校長先生が都度仰られている｢DX｣を最も活かせられるコースこそがEコースです。また多様化における視点の広さは個人のセンスや技術によります。その技術をデジタルとアナログの二観点を両方とも重要視しているのもEコースです。そのため、DX化における変化に対応することができ、やるべき事が明確にできます。また資格もはっきりとしていて、｢電気分野ならこの資格は必須｣という資格の内容は全て必要です。そのためEコースでは多くのことを勉強しなければなりませんが、得られる技術は他のコースに比べて進んだものになるだろうと感じています。</div>
+                <div class="medium">オススメのサイト</div>
+                <div class="small">もしEコースに関連することを勉強したいのであれば以下のサイトがオススメです。
+                    <ul>
+                     <li><a href="https://sakigake-robo.com/" target="_blank">魁高専</a></li>
+                     <li><a href="https://www.ct.omu.ac.jp/pect-lab/lecture/" target="_blank">PECT-LAB</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
